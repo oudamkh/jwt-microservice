@@ -1,0 +1,29 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: core
+
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: 123456
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  h2:
+    console:
+     enabled: true
+
+# JWT Configuration
+jwt:
+  secret: 4BhnNapYUhdI936Oc60W55K1qtnJ+WsgrSh7H/g65eA=
+  keys:
+    private: MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCloJ0B6LCWI4gxaLcscEHXQBdALIKD/P8EN4XmTl+H9VBaLM3SwZaeD0YI95+blvPQzxTvyLchS+71y+m07AQ45xRsc2F16UKzk0NSmLDfGveXXIkNhgG+BKW2sVpPH1TvsG7shF4NJI97k/QZEMx9Q0erFkPTKfJIUuDknBRjTHFUggFNNzgoXCHOFjj/NYj5Fbl21XFwAbPRvveZXq+QHMxKrM17aJUb0yoYY81eM9ZPR7Ye34MeLj6TJpuXwM8mfNJz6uMwzJJvqP71AF34mSpFXZIoaCOOgmNLm/pV/PEh4NhAALA4lDeT1oymSs9qBOPtDNACU+wwli119GALAgMBAAECggEAUEYZgsjX+VSsWCIkEVYxGxXVjwVjlnwCz3TnoVlf5MHJWYM4mIq6KM5HR+ZYRa0ya4RKZfMWiv1GCnxzv3vaige5dtyvIlpVOTrJGNmnc+KamJJBXLwT0RhohrTLi+ioHmmZQWngOad8IU1ys8lYCugWbr3iTpCYfGQq2rIpEXy8qmzjeZQwrV/mHOPC9Po0r/j1wXQijJXvEyBi4s0FQDJsLD11G06YJCmCB6OvECBeSbCBkFiZncOgdt5czyVNq0BPYhkmjW05CdVqPiSmE1+YCoY+iSb8L9FrUMeS2PcLcw53rj6d3E5ofH1bOEtezIiZrwryzGQfrSZz2WO3pQKBgQC2c8OAQHRRyYHz+y/qKgEPA7aj+81A/d9bDQrUV9IOl3mFpAT/gHB/rQ/wRKZJphmj0K63jTSTzOEFYNoP/a4F5ok3DQ3qreE7Ffa4bxXF6DVxWJrmGGVQOYpsB4ge0MILTLjMK8uSeJ+QcE6bUqxmOT8X1vnZE0RjP37YMmxmJQKBgQDoZJs0OfEhqxIqNO/smt5YthpHDkC/SarPXUicZdq5vp2XTDfSfM+jIDV28x1NAylfxMcoVbo3UJUXvst0LkFxx2abnsKP91RWZRW98wP74KW4A16HCrEJ0O+bZsI+zUeIJsa89Nt/PSvDB50shd6UlYB8uwg8C7/UTfbp2ODebwKBgQChyt5e6Mk9jbfTp7fBqyXtLpnTqQNG0toyX8puqsH3dpOo0t4rxLX+QnWT1wyu2sB56CBHXMx3FIOmxVAaRhb/3INpcgYZScAlKUD0JG3mZhiePrh9urx8+8moKrWmvfCVHJ/zThLj/FtjNnQ+gH2o2LL+bQB6Yv+OE0xkY7KEkQKBgQCmeSNhNzyQFL8PcxqH0K0EuXZ7fi9NmFT+9OEGAES+GFlFv7ihVP1c6r7B9ggAWgpya0ELmNWruFMFTozqLhR9kAzl38WaYd+NgB4iEwrAjT3JYsh9TmBiGsT5+pOdb2oVk0l8pJ70N/q4XCTwdvlqUOpY75ZHhVcmm68L92umiwKBgQCpYHQb2VIxYNTJIQMiJh2Uy0OQ9vWA4a99q6XuefGp6Tq3hyZLZX6VaqpEQomfXQXzIk72yz7+o0/FE9TLJvm3GWezMicBDqvTWUytq44vV3Xa5mgPK9w/YHAdZ6p1rcOrOqDZvez/Z7TZQ3TrXiZwKLdfERp0xha2fk+Hglj6WA==
+    public: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApaCdAeiwliOIMWi3LHBB10AXQCyCg/z/BDeF5k5fh/VQWizN0sGWng9GCPefm5bz0M8U78i3IUvu9cvptOwEOOcUbHNhdelCs5NDUpiw3xr3l1yJDYYBvgSltrFaTx9U77Bu7IReDSSPe5P0GRDMfUNHqxZD0ynySFLg5JwUY0xxVIIBTTc4KFwhzhY4/zWI+RW5dtVxcAGz0b73mV6vkBzMSqzNe2iVG9MqGGPNXjPWT0e2Ht+DHi4+kyabl8DPJnzSc+rjMMySb6j+9QBd+JkqRV2SKGgjjoJjS5v6VfzxIeDYQACwOJQ3k9aMpkrPagTj7QzQAlPsMJYtdfRgCwIDAQAB
+  expiration: 86400000
+  refresh:
+    expiration: 604800000
