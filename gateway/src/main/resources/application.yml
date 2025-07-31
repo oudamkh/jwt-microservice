@@ -20,6 +20,6 @@ spring:
             uri: http://localhost:8081
             predicates[0]: Path=/api/auth/**
           routes[1]:
-            id: acccount
+            id: account
             uri: http://localhost:8082
             predicates[0]: Path=/api/accounts/**

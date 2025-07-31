@@ -1,2 +1,2 @@
 rootProject.name = 'jwtmodules'
-include 'core', 'account', 'service'
+include 'core', 'account', 'gateway'
